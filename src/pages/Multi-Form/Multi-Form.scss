@@ -2,7 +2,6 @@
 
 .main-container {
   background: $white-bg-color;
-  width: min(500px);
   padding-top: 4%;
 
   .app-icon {
@@ -13,7 +12,7 @@
   }
   .step-class {
     padding-top: 40px;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 
     .ant-steps-item-process {
@@ -24,13 +23,26 @@
           .ant-steps-icon {
             font-size: 0.9rem;
             top: -2px;
+
+            .circle {
+              height: 34px;
+              width: 34px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: $primary-purple-color;
+              font-size: 1.4rem;
+              margin: 38px 0;
+              color: $white-color;
+            }
           }
         }
       }
     }
   }
   main {
-    padding-top: 12%;
+    padding-top: 10%;
     display: block;
   }
 }

@@ -2,6 +2,11 @@ import React, { useContext } from "react";
 import { Form, Input, Button } from "antd";
 import "../styles/style.scss";
 import MultiStepContext from "../context/MultiStepContext";
+import {
+  CREATE_WORKSPACE,
+  SECOND_PAGE_SUB_TITLE,
+  SECOND_PAGE_TITLE,
+} from "../utils/constants";
 
 const SecondStep = () => {
   const { workDetails, setWorkDetails, next } = useContext(MultiStepContext);
@@ -13,8 +18,8 @@ const SecondStep = () => {
 
   return (
     <div className="step-main-container">
-      <h1 className="title-text">Let's set up a home for all your work</h1>
-      <h4 className="subtitle-text">You can always change them later</h4>
+      <h1 className="title-text">{SECOND_PAGE_TITLE}</h1>
+      <h4 className="subtitle-text">{SECOND_PAGE_SUB_TITLE}</h4>
 
       <Form
         layout="vertical"
@@ -30,14 +35,14 @@ const SecondStep = () => {
           <Input placeholder="Eden" />
         </Form.Item>
         <Form.Item label="Workspace URL (optional)" name="workSpaceURL">
-          <Input addonBefore="www.ede.com/" defaultValue="Example" />
+          <Input addonBefore="www.ede.com/" placeholder="Example" />
         </Form.Item>
         <Button
           type="primary"
           className="custom-purple-button"
           htmlType="submit"
         >
-          Create Workspace
+          {CREATE_WORKSPACE}
         </Button>
       </Form>
     </div>

@@ -2,6 +2,11 @@ import React, { useContext } from "react";
 import { Form, Input, Button } from "antd";
 import "../styles/style.scss";
 import MultiStepContext from "../context/MultiStepContext";
+import {
+  CREATE_WORKSPACE,
+  FIRST_PAGE_SUB_TITLE,
+  FIRST_PAGE_TITLE,
+} from "../utils/constants";
 
 const FirstStep = () => {
   const { nameDetails, setNameDetails, next } = useContext(MultiStepContext);
@@ -13,8 +18,8 @@ const FirstStep = () => {
 
   return (
     <div className="step-main-container">
-      <h1 className="title-text">Welcome! First things first...</h1>
-      <h4 className="subtitle-text">You can always change them later</h4>
+      <h1 className="title-text">{FIRST_PAGE_TITLE}</h1>
+      <h4 className="subtitle-text">{FIRST_PAGE_SUB_TITLE}</h4>
 
       <Form
         layout="vertical"
@@ -43,7 +48,7 @@ const FirstStep = () => {
           className="custom-purple-button"
           htmlType="submit"
         >
-          Create Workspace
+          {CREATE_WORKSPACE}
         </Button>
       </Form>
     </div>

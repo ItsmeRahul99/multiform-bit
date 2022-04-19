@@ -5,22 +5,25 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+
   .title-text {
     font-size: 2.2rem;
     font-weight: 700;
     color: $dark-text-black-color;
     margin: 0;
     margin-bottom: 10px;
+    text-align: center;
   }
   .subtitle-text {
     font-size: 1rem;
     color: $label-text-subtitle-gray;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .custom-center-form {
-    width: 100%;
-    margin-top: 24px;
+    padding-top: 30px;
+    width: 70%;
+    margin: 0 auto;
     .ant-form-item {
       .ant-form-item-label {
         label {
@@ -77,5 +80,65 @@
       width: 100%;
       border-radius: 6px;
     }
+    .decision-group {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 18px;
+      gap: 1rem;
+      justify-content: space-evenly;
+
+      .decision-sec {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 8px;
+        border: 1px solid $grey-color;
+        padding: 18px 24px;
+        cursor: pointer;
+        max-width: 38%;
+        transition: 250ms ease;
+
+        &.active {
+          border: 1px solid $primary-purple-color;
+          transition: 250ms ease;
+        }
+
+        .icon {
+          font-size: 1.4rem;
+          color: "#364259";
+          transition: 150ms ease;
+
+          &.active {
+            color: $primary-purple-color;
+            transition: 150ms ease;
+          }
+        }
+        label {
+          font-weight: 700;
+          color: $dark-text-black-color;
+          font-size: 1rem;
+          margin: 12px 0;
+        }
+        p {
+          font-weight: 500;
+          color: $label-text-gray-color;
+          font-size: 0.9rem;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .purple-circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-purple-color;
+    font-size: 1.4rem;
+    margin: 38px 0;
+    color: $white-color;
   }
 }

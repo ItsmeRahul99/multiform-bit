@@ -41,14 +41,16 @@ const MultiStepForm = () => {
   const [nameDetails, setNameDetails] = useState(firstStepState);
   const [workDetails, setWorkDetails] = useState(secondStepState);
   const [useEdenDetails, setUseEdenDetails] = useState(thirdStepState);
+  const [finalPreview, setfinalPreview] = useState();
   const [currentStep, setCurrentStep] = useState(0);
 
   const next = () => {
-    if (currentStep === 2) {
+    if (currentStep === 3) {
       setCurrentStep(0);
       setNameDetails(firstStepState);
       setWorkDetails(secondStepState);
       setUseEdenDetails(thirdStepState);
+      setfinalPreview();
       return;
     }
     setCurrentStep(currentStep + 1);
@@ -70,7 +72,11 @@ const MultiStepForm = () => {
       <div className="main-container">
         <img src={AppIcon} className="app-icon" alt="logo" />
 
-        <Steps current={currentStep} className="step-class">
+        <Steps
+          direction="horizontal"
+          current={currentStep}
+          className="step-class"
+        >
           <Step />
           <Step />
           <Step />
