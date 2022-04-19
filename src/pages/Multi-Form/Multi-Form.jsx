@@ -41,7 +41,7 @@ const MultiStepForm = () => {
   const [nameDetails, setNameDetails] = useState(firstStepState);
   const [workDetails, setWorkDetails] = useState(secondStepState);
   const [useEdenDetails, setUseEdenDetails] = useState(thirdStepState);
-  const [finalPreview, setfinalPreview] = useState();
+  const [setfinalPreview] = useState();
   const [currentStep, setCurrentStep] = useState(0);
 
   const next = () => {
