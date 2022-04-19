@@ -1,0 +1,36 @@
+@import "../../styles/variable.scss";
+
+.main-container {
+  background: $white-bg-color;
+  width: min(500px);
+  padding-top: 4%;
+
+  .app-icon {
+    width: auto;
+    height: 70px;
+    margin: 0 auto;
+    display: block;
+  }
+  .step-class {
+    padding-top: 40px;
+    width: 80%;
+    margin: 0 auto;
+
+    .ant-steps-item-process {
+      .ant-steps-item-container {
+        .ant-steps-item-icon {
+          background: $primary-purple-color;
+          border-color: $primary-purple-color;
+          .ant-steps-icon {
+            font-size: 0.9rem;
+            top: -2px;
+          }
+        }
+      }
+    }
+  }
+  main {
+    padding-top: 12%;
+    display: block;
+  }
+}

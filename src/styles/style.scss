@@ -1,0 +1,81 @@
+@import "./variable.scss";
+
+.step-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .title-text {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $dark-text-black-color;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .subtitle-text {
+    font-size: 1rem;
+    color: $label-text-subtitle-gray;
+    font-weight: 600;
+  }
+
+  .custom-center-form {
+    width: 100%;
+    margin-top: 24px;
+    .ant-form-item {
+      .ant-form-item-label {
+        label {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: $label-text-gray-color;
+        }
+      }
+      .ant-form-item-control {
+        .ant-form-item-control-input {
+          .ant-form-item-control-input-content {
+            .ant-input-group-wrapper {
+              .ant-input-group {
+                .ant-input-group-addon {
+                  color: $placeholder-gray-color;
+                  background: $lightest-blue-bg-color;
+                }
+              }
+            }
+            .ant-input {
+              font-size: 0.9rem;
+              font-weight: 500;
+              padding: 8px 11px;
+
+              &::placeholder {
+                color: $placeholder-gray-color;
+                opacity: 1;
+              }
+
+              &:-ms-input-placeholder {
+                color: $placeholder-gray-color;
+              }
+
+              &::-ms-input-placeholder {
+                color: $placeholder-gray-color;
+              }
+
+              &:hover {
+                border-color: $primary-purple-color;
+              }
+              &:focus {
+                border-color: $primary-purple-color;
+                box-shadow: 0 0 0 2px rgb(233, 228, 255);
+              }
+            }
+          }
+        }
+      }
+    }
+    .custom-purple-button {
+      background: $primary-purple-color;
+      border-color: $primary-purple-color;
+      height: 48px;
+      width: 100%;
+      border-radius: 6px;
+    }
+  }
+}
